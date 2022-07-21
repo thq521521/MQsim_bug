@@ -1,0 +1,13 @@
+    //past
+    auto itr = domains[stream_id]->Locked_LPAs.find(lpa);
+		if (itr == domains[stream_id]->Locked_LPAs.end()) {
+			PRINT_ERROR("Illegal operation: Unlocking an LPA that has not been locked!");
+		}
+		domains[stream_id]->Locked_LPAs.erase(itr);}
+
+    //now
+    auto itr = domains[stream_id]->Locked_LPAs.find(lpa);
+		if (itr == domains[stream_id]->Locked_LPAs.end()) {
+			//PRINT_ERROR("Illegal operation: Unlocking an LPA that has not been locked!");
+		}else{
+		domains[stream_id]->Locked_LPAs.erase(itr);}
